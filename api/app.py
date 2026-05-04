@@ -200,9 +200,7 @@ def view(user_id): # dinh nghia route cho duong dan '/view/<int:user_id>', chi c
     conn.close() # thuc ra fetchone cung duoc neu chi muon lay mot user, nhung de cho de code va de sau nay co the thay doi de lay nhieu user cung luc thi ta dung fetchall() de luu vao bien users la mot danh sach cac user (duoi dang sqlite3.Row), neu chi co mot user thi danh sach se chi chua mot phan tu, neu khong co user nao trung thi danh sach se rong
 
     return jsonify([dict(row) for row in users]) # tra ve mot danh sach cac dict duoc chuyen doi sang json, moi dict dai dien cho mot user trong bang users, dict(row) chuyen doi doi tuong row thanh mot dict de co the truyen vao json
-    
-    
-    
+
     #return render_template('index.html', users=users) 
     
     # render_template de render file html, o day la index.html, va truyen bien users vao file html de su dung trong do, users se tro thanh mot danh sach cac doi tuong sqlite3.Row dai dien cho user, ban co the truy cap du lieu trong moi row bang ten cot (vd: row['username']) trong file html

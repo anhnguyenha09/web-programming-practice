@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nguyen Ha Anh</title>
+    <style>
+        body {
+        font-family: Arial;
+        color: black;
+        background-color: blue
+        }
+        h1 {
+        color: pink;
+        text-align: center;
+        }
+        table {
+        background-color: yellow;
+        margin: 0 auto;
+        text-align: center;
+        width: 90%;
+        }
+        th {
+        background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<h1>
+    Danh sach user
+</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>username</th>
+        <th>email</th>
+        <th>ma lop</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for user in users %}
+    <tr>
+        <td> {{ user.id }} </td>
+        <td> {{ user.username }} </td>
+        <td> {{ user.email }} </td>
+        <td> {{ user.class_id }} </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
